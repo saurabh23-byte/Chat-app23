@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: url(../public/backkgroundImage.avif);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
