@@ -29,6 +29,7 @@ const Login = () => {
       navigate("/");
       console.log(res);
       dispatch(setAuthUser(res.data));   // storing the res.data to redux for global use 
+      
     } catch (error) {
       toast.error(error.response.data.message);
       console.log(error);

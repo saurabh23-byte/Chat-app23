@@ -25,7 +25,7 @@ const rootReducer = combineReducers({
   user: userReducer,
   message: messageReducer,
   socket: socketReducer
-})
+});
 
 const persistedReducer = persistReducer(persistConfig, rootReducer)
 

@@ -15,12 +15,30 @@ const messageModel = new mongoose.Schema({
         type: String,
         required: true
     },
+    editedAt: {
+        type: Date,
+        default: null
+
+    },
     deletedFor: [
         {
             type: mongoose.Schema.Types.ObjectId,
             ref: "User",
         },
     ],
+    reactions: [
+        {
+            userId: {
+                type: mongoose.Schema.Types.ObjectId,
+                ref: "User",
+                required: true
+            },
+            emoji: {
+                type: String,
+                required: true
+            }
+        }
+    ]
 
 }, { timestamps: true });
 export const Message = mongoose.model("Message", messageModel);
