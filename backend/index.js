@@ -24,7 +24,10 @@ const __dirname = path.resolve();
 // -------------------- MIDDLEWARE --------------------
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(cookieParser());
+app.use(cookieParser()); app.use(
+  "/uploads",
+  express.static(path.join(process.cwd(), "backend/uploads"))
+);
 
 const allowedOrigins = [
   "http://localhost:3000",
